@@ -1,0 +1,120 @@
+.cont-map-barrio {
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.cont-map-barrio::before {
+
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 166, 0, 0.13), rgba(0, 0, 0, 0.316), rgba(0, 0, 0, 0.579), rgba(255, 166, 0, 0.13));
+    z-index: -1;
+}
+
+.btn-entrarMap1,
+.btn-entrarMap2,
+.btn-entrarMap3,
+.btn-entrarMap4,
+.btn-entrarMap5 {
+    position: fixed;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(20, 15, 10, 0.75);
+    border: 1px solid rgba(180, 131, 40, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-entrarMap1 img,
+.btn-entrarMap2 img,
+.btn-entrarMap3 img,
+.btn-entrarMap4 img,
+.btn-entrarMap5 img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    filter: brightness(2.2) drop-shadow(0 0 4px rgba(220, 160, 40, 0.8));
+}
+
+.btn-entrarMap1 { top: 24%; left: 13%; }
+.btn-entrarMap2 { top: 15%; left: 55%; }
+.btn-entrarMap3 { top: 65%; left: 75%; }
+.btn-entrarMap4 { top: 68%; left: 40%; }
+.btn-entrarMap5 { top: 65%; left: 5%;  }
+
+.casa-bloqueada {
+    filter: grayscale(100%) brightness(0.4);
+    pointer-events: none;
+}
+
+/* ── Lock icons ── */
+.house-lock {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transform: translate(14px, -8px);
+}
+
+.lock-closed {
+    color: #7d7d7d;
+   
+}
+
+.lock-open {
+    color: #f49f00;
+   
+}
+
+.house-lock-1 { top: calc(24% + 30px); left: calc(13% + 14px); }
+.house-lock-2 { top: calc(15% + 30px); left: calc(55% + 14px); }
+.house-lock-3 { top: calc(65% + 30px); left: calc(75% + 14px); }
+.house-lock-4 { top: calc(68% + 30px); left: calc(40% + 14px); }
+.house-lock-5 { top: calc(65% + 30px); left: calc(5%  + 14px); }
+
+/* ── Tutorial fase 0: botones de mapa ── */
+.btn-entrarMap-tuto {
+  position: fixed;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(20,15,10,0.75);
+  border: 1px solid rgba(180,131,40,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.btn-entrarMap-tuto img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: brightness(2.2) drop-shadow(0 0 4px rgba(220,160,40,0.8));
+}
+
+.tuto-looted-check {
+  font-size: 0.55rem;
+  color: #f49f00;
+  line-height: 1;
+}
+
+/* Posiciones — ajusta una vez veas el mapa */
+.btn-entrarMap-tuto-tienda   { top: 35%; left: 25%; }
+.btn-entrarMap-tuto-estacion { top: 65%; left: 20%; }

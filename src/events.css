@@ -1,0 +1,142 @@
+/*! ==================================ESTILOS DE MODAL DE EVENTOS==========================*/
+
+/*! ==================================CONTENEDOR MODAL Y EFECTOS==========================*/
+.modal-event {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+}
+
+.modal-event::before {
+
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.615);
+    z-index: -1;
+}
+
+.modal-event::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.073), rgba(255, 255, 255, 0.519));
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+@keyframes flashLightning {
+    0% {
+        opacity: 0;
+    }
+
+    4% {
+        opacity: 1;
+    }
+
+    12% {
+        opacity: 0.6;
+    }
+
+    30% {
+        opacity: 0.35;
+    }
+
+    60% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+.modal-event.flash::after {
+    animation: flashLightning 1.3s ease-out;
+}
+
+/*! ==================================CONTENIDO DEL MODAL- EVENTOS==========================*/
+
+
+.modal-box {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    height: 92vh;
+
+}
+
+.event-choices {
+
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cont-event p {
+
+    padding: 0 2rem;
+    font-size: 1.3rem;
+}
+
+.cont-event {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.event-choice-btn {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.event-choice-btn.bloqueado {
+    opacity: 0.4;
+    filter: grayscale(100%);
+    cursor: not-allowed;
+}
+
+.evento-sin-salida {
+    padding: 0.5rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-evento-lose {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #7a0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
